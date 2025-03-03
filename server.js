@@ -9,13 +9,13 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Import routes
-const authRoutes = require("./routes/authRoutes"); // Ensure this path is correct
-app.use("/auth", authRoutes);  // This ensures "/auth/register" exists
+// Import authentication routes
+const authRoutes = require("./routes/authRoutes");
+app.use("/auth", authRoutes); // <-- This ensures "/auth/register" works
 
 // Test Route
 app.get("/", (req, res) => {
-  res.send("Auth service is running...");
+    res.send("Auth service is running...");
 });
 
 // Start server
