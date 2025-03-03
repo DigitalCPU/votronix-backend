@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 // Import routes
-const authRoutes = require("./routes/authRoutes"); // Make sure this is correct
+const authRoutes = require("./routes/authRoutes"); // Ensure this path is correct
 app.use("/auth", authRoutes);  // This ensures "/auth/register" exists
 
 // Test Route
